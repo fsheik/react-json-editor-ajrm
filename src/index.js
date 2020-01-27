@@ -41,7 +41,7 @@ class JSONInput extends Component {
             error           : false
         };
         if (!this.props.locale) {
-            console.warn("[react-json-editor-ajrm - Deprecation Warning] You did not provide a 'locale' prop for your JSON input - This will be required in a future version. English has been set as a default.");
+            console.warn("[react-json-ide - Deprecation Warning] You did not provide a 'locale' prop for your JSON input - This will be required in a future version. English has been set as a default.");
         }
     }
     updateInternalProps(){

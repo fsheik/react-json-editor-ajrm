@@ -1,8 +1,4 @@
 /**
- * @author Andrew Redican <andrew.redican.mejia@gmail.com>
- */
-
-/**
  * Performs deep search on object tree, removes all properties with matching key, returns a new identity without the specified property
  * @param {Any} identity
  * @param {string} keyName
