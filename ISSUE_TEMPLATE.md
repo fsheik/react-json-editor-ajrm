@@ -1,4 +1,4 @@
-1. What version of RJEA are you using (react-json-editor-ajrm version)? *REQUIRED
+1. What version of RJI are you using (react-json-ide version)? *REQUIRED
 2. What operating system and processor architecture are you using? *REQUIRED
 3. What did you do? *REQUIRED
 4. What did you expect to see? *REQUIRED
