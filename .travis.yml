@@ -3,7 +3,7 @@ language: node_js
 cache:
   directories:
   - node_modules
-node_js: 9
+node_js: 12
 branches:
   only:
     - master
@@ -11,3 +11,13 @@ notifications:
   email: false
 script:
   - npm run test
+before_deploy:
+  - npm run build
+  - cd dist
+deploy:
+  provider: npm
+  email: "$NPM_EMAIL"
+  api_key: "$NPM_API_TOKEN"
+  skip_cleanup: true
+  on:
+    branch: release
