@@ -1,8 +1,6 @@
-*NOTE: This library is currently (02.01.2018) **unmaintained**. You may want to [look around for an alternative](https://www.google.com/search?q=json+editor+react) until a new maintainer can be found.*
+# react-json-ide
 
-# react-json-editor-ajrm
-
-![npm](https://img.shields.io/npm/v/react-json-editor-ajrm.svg) ![Build Status](https://travis-ci.com/AndrewRedican/react-json-editor-ajrm.svg?branch=master) ![npm](https://img.shields.io/npm/dm/react-json-editor-ajrm.svg) [![Known Vulnerabilities](https://snyk.io/test/github/AndrewRedican/react-json-editor-ajrm/badge.svg)](https://snyk.io/test/github/{username}/{repo}) [![All Contributors](https://img.shields.io/badge/all_contributors-15-orange.svg?style=flat-square)](#contributors)
+![npm](https://img.shields.io/npm/v/react-json-ide.svg) ![Build Status](https://travis-ci.com/fsheik/react-json-ide.svg?branch=master) ![npm](https://img.shields.io/npm/dm/react-json-ide.svg) [![Known Vulnerabilities](https://snyk.io/test/github/fsheik/react-json-ide/badge.svg)](https://snyk.io/test/github/{username}/{repo}) [![All Contributors](https://img.shields.io/badge/all_contributors-15-orange.svg?style=flat-square)](#contributors)
 
 <p align="center"><img src=https://i.imgur.com/ewtebIW.gif><br /><br />A stylish, editor-like, modular, react component for viewing, editing, and debugging javascript object syntax!</p>
 
@@ -11,14 +9,14 @@
 - Using node package manager:
 
 ```
-   $ npm i --save react-json-editor-ajrm
+   $ npm i --save react-json-ide
 ```
 
 ## How to Use
 
 ```
-    import JSONInput from 'react-json-editor-ajrm';
-    import locale    from 'react-json-editor-ajrm/locale/en';
+    import JSONInput from 'react-json-ide';
+    import locale    from 'react-json-ide/locale/en';
 
     <JSONInput
         id          = 'a_unique_id'
@@ -29,7 +27,7 @@
     />
 ```
 
-*Hint*: There are two different root paths: `react-json-editor-ajrm` and `react-json-editor-ajrm/es`. The first contains polyfilled ES5 code, the second unpolyfilled ES6. The `react-json-editor-ajrm/es` version is **not compatible** with [`create-react-app`](https://github.com/facebook/create-react-app). If you are unsure of which one you need/want, pick the first - it has the best compatibility with tools and browsers.
+*Hint*: There are two different root paths: `react-json-ide` and `react-json-ide/es`. The first contains polyfilled ES5 code, the second unpolyfilled ES6. The `react-json-ide/es` version is **not compatible** with [`create-react-app`](https://github.com/facebook/create-react-app). If you are unsure of which one you need/want, pick the first - it has the best compatibility with tools and browsers.
 
 ## Examples
 
@@ -41,10 +39,10 @@ The `./examples` folder contains two examples:
 ## Testing right away!
 
 1. Fork and/or clone this Github repository
-2. Go to an example project under [react-json-editor-ajrm/example](https://github.com/AndrewRedican/react-json-editor-ajrm/tree/master/example):
+2. Go to an example project under [react-json-ide/example](https://github.com/fsheik/react-json-ide/tree/master/example):
 
 ```
-    $ cd path/to/repo/react-json-editor-ajrm/example/webpack-project
+    $ cd path/to/repo/react-json-ide/example/webpack-project
 ```
 
 3. Install example project dependencies:
@@ -84,7 +82,7 @@ The `./examples` folder contains two examples:
 
 | Name                          | Description                                                                                                                                                                                                                                                                                     |   Type   | Required  |
 | ----------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | :------: | :-------: |
-| [locale]()                    | The locale of your editor. Import locales like this: `import locale from 'react-json-editor-ajrm/locale/en'`. [Learn More](https://github.com/AndrewRedican/react-json-editor-ajrm/wiki/Locale-Support)                                                                    |  object  | Mandatory |
+| [locale]()                    | The locale of your editor. Import locales like this: `import locale from 'react-json-ide/locale/en'`. [Learn More](https://github.com/fsheik/react-json-ide/wiki/Locale-Support)                                                                    |  object  | Mandatory |
 | [id]()                        | An optional `id` to assign to the actual text input DOM node. Asides the from the text input, the following nodes will also receive an id: `{id}-outer-box`, `{id}-container`, `{id}-warning-box`, `{id}-labels`                                                                             |  string  | Optional  |
 | [placeholder]()               | Send a valid javascript object to be shown once the component is mounted. Assign a different value to have the component's initial content re-rendered.                                                                                                                                     |  object  | Optional  |
 | [reset]()                     | Send `true` to have component always re-render or 'reset' to the value provided on the `placeholder` property.                                                                                                                                                                                  |  boolean | Optional  |
@@ -96,7 +94,7 @@ The `./examples` folder contains two examples:
 | [onKeyPressUpdate]()          | Send `false` if you would like for component not to automatically update on key press.                                                                                                                                                                                                          | boolean  | Optional  |
 | [waitAfterKeyPress]()         | Amount of milliseconds to wait before re-rendering content after keypress. Value defaults to `1000` when not specified. In other words, component will update if there is no additional keystroke after the last one within 1 second. Less than `100` milliseconds does not makes a difference. |  number  | Optional  |
 | [modifyErrorText]()           | A custom function to modify the component's original warning text. This function will receive a single parameter of type `string` and must equally return a `string`.                                                                                                                           | function | Optional  |
-| [theme]()                     | Specify which [built-in theme](https://github.com/AndrewRedican/react-json-editor-ajrm/wiki/Built-In-Themes) to use.                                                                                                                                                                            |  string  | Optional  |
+| [theme]()                     | Specify which [built-in theme](https://github.com/fsheik/react-json-ide/wiki/Built-In-Themes) to use.                                                                                                                                                                            |  string  | Optional  |
 | [colors]()                    | **Contains the following properties:**                                                                                                                                                                                                                                                          |  object  | Optional  |
 | colors.[default]()            | Hex color code for any symbols, like curly `braces`, and `comma`.                                                                                                                                                                                                                               |  string  | Optional  |
 | colors.[string]()             | Hex color code for tokens identified as `string` values.                                                                                                                                                                                                                                        |  string  | Optional  |
@@ -134,7 +132,7 @@ The `./examples` folder contains two examples:
 
 ## Content Values
 
-Whenever RJEA re-renders its content, any function passed onto `onChange` property will receive a single object parameter with the following keys and values:
+Whenever RJI re-renders its content, any function passed onto `onChange` property will receive a single object parameter with the following keys and values:
 
 | Key        | Description                                                                                                                                                                                           |
 | ---------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -147,7 +145,7 @@ Whenever RJEA re-renders its content, any function passed onto `onChange` proper
 
 ## Built-In Themes
 
-RJEA supports built-in theme. Here is the [list](https://github.com/AndrewRedican/react-json-editor-ajrm/wiki/Built-In-Themes).
+RJI supports built-in theme. Here is the [list](https://github.com/fsheik/react-json-ide/wiki/Built-In-Themes).
 
 ## Built With
 
@@ -167,10 +165,10 @@ Thanks goes to these wonderful people :smile::
 
 <!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
 <!-- prettier-ignore -->
-| [<img src="https://avatars2.githubusercontent.com/u/24832471?v=4" width="100px;"/><br /><sub><b>Andrew Redican</b></sub>](https://github.com/AndrewRedican)<br />[📢](#talk-AndrewRedican "Talks") [💻](https://github.com/AndrewRedican/react-json-editor-ajrm/commits?author=AndrewRedican "Code") [🌍](#translation-AndrewRedican "Translation") [⚠️](https://github.com/AndrewRedican/react-json-editor-ajrm/commits?author=AndrewRedican "Tests") | [<img src="https://avatars3.githubusercontent.com/u/7840502?v=4" width="100px;"/><br /><sub><b>Patrick Sachs</b></sub>](https://patrick-sachs.de/)<br />[💻](https://github.com/AndrewRedican/react-json-editor-ajrm/commits?author=PatrickSachs "Code") [🌍](#translation-PatrickSachs "Translation") [⚠️](https://github.com/AndrewRedican/react-json-editor-ajrm/commits?author=PatrickSachs "Tests") | [<img src="https://avatars3.githubusercontent.com/u/37770361?v=4" width="100px;"/><br /><sub><b>Allan Kehl</b></sub>](https://allankehl.com)<br />[🌍](#translation-AllanKDeveloper "Translation") | [<img src="https://avatars3.githubusercontent.com/u/426051?v=4" width="100px;"/><br /><sub><b>esbenvb</b></sub>](https://github.com/esbenvb)<br />[📖](https://github.com/AndrewRedican/react-json-editor-ajrm/commits?author=esbenvb "Documentation") | [<img src="https://avatars2.githubusercontent.com/u/5831420?v=4" width="100px;"/><br /><sub><b>Markus Petrykowski</b></sub>](http://markus-petrykowski.de)<br />[💡](#example-PetrykowskiM "Examples") | [<img src="https://avatars0.githubusercontent.com/u/5797143?v=4" width="100px;"/><br /><sub><b>Rick Brunstedt</b></sub>](https://github.com/rickbrunstedt)<br />[💻](https://github.com/AndrewRedican/react-json-editor-ajrm/commits?author=rickbrunstedt "Code") | [<img src="https://avatars3.githubusercontent.com/u/20251640?v=4" width="100px;"/><br /><sub><b>ADirtyCat</b></sub>](https://github.com/ADirtyCat)<br />[🌍](#translation-ADirtyCat "Translation") |
+| [<img src="https://avatars2.githubusercontent.com/u/24832471?v=4" width="100px;"/><br /><sub><b>Andrew Redican</b></sub>](https://github.com/AndrewRedican)<br />[📢](#talk-AndrewRedican "Talks") [💻](https://github.com/fsheik/react-json-ide/commits?author=AndrewRedican "Code") [🌍](#translation-AndrewRedican "Translation") [⚠️](https://github.com/fsheik/react-json-ide/commits?author=AndrewRedican "Tests") | [<img src="https://avatars3.githubusercontent.com/u/7840502?v=4" width="100px;"/><br /><sub><b>Patrick Sachs</b></sub>](https://patrick-sachs.de/)<br />[💻](https://github.com/fsheik/react-json-ide/commits?author=PatrickSachs "Code") [🌍](#translation-PatrickSachs "Translation") [⚠️](https://github.com/fsheik/react-json-ide/commits?author=PatrickSachs "Tests") | [<img src="https://avatars3.githubusercontent.com/u/37770361?v=4" width="100px;"/><br /><sub><b>Allan Kehl</b></sub>](https://allankehl.com)<br />[🌍](#translation-AllanKDeveloper "Translation") | [<img src="https://avatars3.githubusercontent.com/u/426051?v=4" width="100px;"/><br /><sub><b>esbenvb</b></sub>](https://github.com/esbenvb)<br />[📖](https://github.com/fsheik/react-json-ide/commits?author=esbenvb "Documentation") | [<img src="https://avatars2.githubusercontent.com/u/5831420?v=4" width="100px;"/><br /><sub><b>Markus Petrykowski</b></sub>](http://markus-petrykowski.de)<br />[💡](#example-PetrykowskiM "Examples") | [<img src="https://avatars0.githubusercontent.com/u/5797143?v=4" width="100px;"/><br /><sub><b>Rick Brunstedt</b></sub>](https://github.com/rickbrunstedt)<br />[💻](https://github.com/fsheik/react-json-ide/commits?author=rickbrunstedt "Code") | [<img src="https://avatars3.githubusercontent.com/u/20251640?v=4" width="100px;"/><br /><sub><b>ADirtyCat</b></sub>](https://github.com/ADirtyCat)<br />[🌍](#translation-ADirtyCat "Translation") |
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 | [<img src="https://avatars0.githubusercontent.com/u/13097851?v=4" width="100px;"/><br /><sub><b>Cédric</b></sub>](https://github.com/cbonaudo)<br />[🌍](#translation-cbonaudo "Translation") | [<img src="https://avatars3.githubusercontent.com/u/6660141?v=4" width="100px;"/><br /><sub><b>Radit</b></sub>](http://radityasurya.com)<br />[🌍](#translation-radityasurya "Translation") | [<img src="https://avatars2.githubusercontent.com/u/23220242?v=4" width="100px;"/><br /><sub><b>asketes</b></sub>](https://github.com/askesis)<br />[🌍](#translation-askesis "Translation") | [<img src="https://avatars2.githubusercontent.com/u/40763859?v=4" width="100px;"/><br /><sub><b>C.G.Vedant</b></sub>](https://github.com/cgvedant)<br />[🤔](#ideas-cgvedant "Ideas, Planning, & Feedback") | [<img src="https://avatars2.githubusercontent.com/u/19728508?v=4" width="100px;"/><br /><sub><b>Shehbaz Jafri</b></sub>](https://github.com/shehbazjafri)<br />[🌍](#translation-shehbazjafri "Translation") | [<img src="https://avatars0.githubusercontent.com/u/5652920?v=4" width="100px;"/><br /><sub><b>Vasantha Kumar R B</b></sub>](https://www.linkedin.com/in/vasanthakumarbe)<br />[🌍](#translation-vasind "Translation") | [<img src="https://avatars1.githubusercontent.com/u/35131225?v=4" width="100px;"/><br /><sub><b>Aditya Periwal</b></sub>](https://github.com/Adityaperiwal)<br />[🌍](#translation-Adityaperiwal "Translation") |
-| [<img src="https://avatars3.githubusercontent.com/u/2255993?v=4" width="100px;"/><br /><sub><b>Alexey Lyakhov</b></sub>](https://github.com/JustFly1984)<br />[💻](https://github.com/AndrewRedican/react-json-editor-ajrm/commits?author=JustFly1984 "Code") |
+| [<img src="https://avatars3.githubusercontent.com/u/2255993?v=4" width="100px;"/><br /><sub><b>Alexey Lyakhov</b></sub>](https://github.com/JustFly1984)<br />[💻](https://github.com/fsheik/react-json-ide/commits?author=JustFly1984 "Code") |
 <!-- ALL-CONTRIBUTORS-LIST:END -->
 
 This project follows the [all-contributors](https://github.com/kentcdodds/all-contributors) specification. Contributions of any kind welcome!

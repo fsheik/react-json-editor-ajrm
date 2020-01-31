@@ -1,8 +1,8 @@
 {
-  "name": "react-json-editor-ajrm-example",
+  "name": "react-json-ide-example",
   "version": "1.7.0",
-  "description": "A simple website to showcase react-json-editor-ajrm component",
-  "author": "andrew.redican.mejia@gmail.com",
+  "description": "A simple website to showcase react-json-ide component",
+  "author": "sfarhan21@gmail.com",
   "scripts": {
     "start": "cross-env NODE_ENV=development BABEL_ENV=modules:commonjs webpack-dev-server",
     "build": "cross-env NODE_ENV=production BABEL_ENV=modules:commonjs webpack"
@@ -10,7 +10,7 @@
   "dependencies": {
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
-    "react-json-editor-ajrm": "^2.5.9"
+    "react-json-ide": "^2.5.9"
   },
   "devDependencies": {
     "cross-env": "^5.2.0",
