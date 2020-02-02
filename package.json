@@ -1,6 +1,6 @@
 {
   "name": "react-json-ide",
-  "version": "2.5.9",
+  "version": "2.6.0",
   "description": "A stylish, editor-like, modular, react component for viewing, editing, and debugging javascript object syntax!",
   "author": "sfarhan21@gmail.com",
   "license": "MIT",
